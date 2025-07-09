@@ -26,3 +26,20 @@ void buatNodeBaru(int data)
         tail = baru;
     }
 }
+
+void tambahDepan(int data) 
+{
+    Node *baru = new Node;
+    baru->data = data;
+    baru->next = NULL;
+    baru->prev = NULL;
+
+    if (head == NULL) {
+        head = baru;
+        tail = baru;
+    } else {
+        baru->next = head;
+        head->prev = baru;
+        head = baru;
+    }
+}
