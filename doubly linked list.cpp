@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-struct Node {
+struct Node 
+{
     int data;
     Node *next;
     Node *prev;
@@ -17,10 +18,13 @@ void buatNodeBaru(int data)
     baru->next = NULL;
     baru->prev = NULL;
 
-    if (head == NULL) {
+    if (head == NULL) 
+    {
         head = baru;
         tail = baru;
-    } else {
+    } 
+    else 
+    {
         tail->next = baru;
         baru->prev = tail;
         tail = baru;
@@ -34,10 +38,13 @@ void tambahDepan(int data)
     baru->next = NULL;
     baru->prev = NULL;
 
-    if (head == NULL) {
+    if (head == NULL) 
+    {
         head = baru;
         tail = baru;
-    } else {
+    } 
+    else 
+    {
         baru->next = head;
         head->prev = baru;
         head = baru;
@@ -51,10 +58,13 @@ void tambahBelakang(int data)
     baru->next = NULL;
     baru->prev = NULL;
 
-    if (head == NULL) {
+    if (head == NULL) 
+    {
         head = baru;
         tail = baru;
-    } else {
+    } 
+    else 
+    {
         tail->next = baru;
         baru->prev = tail;
         tail = baru;
@@ -63,9 +73,12 @@ void tambahBelakang(int data)
 
 void tampil() 
 {
-    if (head == NULL) {
+    if (head == NULL) 
+    {
         cout << "List masih kosong!" << endl;
-    } else {
+    } 
+    else 
+    {
         Node *bantu = head;
         while (bantu != NULL) {
             cout << bantu->data << " ";
@@ -77,9 +90,12 @@ void tampil()
 
 void hapusDepan() 
 {
-    if (head == NULL) {
+    if (head == NULL) 
+    {
         cout << "List masih kosong!" << endl;
-    } else {
+    } 
+    else 
+    {
         Node *hapus = head;
         if (head->next != NULL) {
             head = head->next;
@@ -94,9 +110,12 @@ void hapusDepan()
 
 void hapusBelakang() 
 {
-    if (head == NULL) {
+    if (head == NULL) 
+    {
         cout << "List masih kosong!" << endl;
-    } else {
+    } 
+    else 
+    {
         Node *hapus = tail;
         if (tail->prev != NULL) {
             tail = tail->prev;
@@ -111,7 +130,8 @@ void hapusBelakang()
 
 void clear() 
 {
-    while (head != NULL) {
+    while (head != NULL) 
+    {
         hapusBelakang();
     }
     cout << "Semua data berhasil dihapus" << endl;
