@@ -163,4 +163,8 @@ int main() {
                 cout << "Pilihan tidak valid!" << endl;
                 break;
         }
+        } 
+        while (pilihan != 7);
+
+    return 0;
 }
