@@ -6,3 +6,6 @@ struct Node {
     Node *next;
     Node *prev;
 };
+
+Node *head = NULL;
+Node *tail = NULL;
