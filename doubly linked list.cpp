@@ -43,3 +43,21 @@ void tambahDepan(int data)
         head = baru;
     }
 }
+
+void tambahBelakang(int data) 
+{
+    Node *baru = new Node;
+    baru->data = data;
+    baru->next = NULL;
+    baru->prev = NULL;
+
+    if (head == NULL) {
+        head = baru;
+        tail = baru;
+    } else {
+        tail->next = baru;
+        baru->prev = tail;
+        tail = baru;
+    }
+}
+
