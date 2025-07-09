@@ -61,3 +61,17 @@ void tambahBelakang(int data)
     }
 }
 
+void tampil() 
+{
+    if (head == NULL) {
+        cout << "List masih kosong!" << endl;
+    } else {
+        Node *bantu = head;
+        while (bantu != NULL) {
+            cout << bantu->data << " ";
+            bantu = bantu->next;
+        }
+        cout << endl;
+    }
+}
+
