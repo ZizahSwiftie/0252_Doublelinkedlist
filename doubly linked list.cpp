@@ -117,3 +117,18 @@ void clear()
     cout << "Semua data berhasil dihapus" << endl;
 }
 
+int main() {
+    int pilihan, data;
+
+    do {
+        cout << "\n=== MENU DOUBLY LINKED LIST ===" << endl;
+        cout << "1. Tambah Depan" << endl;
+        cout << "2. Tambah Belakang" << endl;
+        cout << "3. Hapus Depan" << endl;
+        cout << "4. Hapus Belakang" << endl;
+        cout << "5. Tampilkan Data" << endl;
+        cout << "6. Hapus Semua Data (Clear)" << endl;
+        cout << "7. Keluar" << endl;
+        cout << "Pilihan Anda: ";
+        cin >> pilihan;
+}
