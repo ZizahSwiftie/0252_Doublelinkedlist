@@ -109,3 +109,11 @@ void hapusBelakang()
     }
 }
 
+void clear() 
+{
+    while (head != NULL) {
+        hapusBelakang();
+    }
+    cout << "Semua data berhasil dihapus" << endl;
+}
+
