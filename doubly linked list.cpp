@@ -92,3 +92,20 @@ void hapusDepan()
     }
 }
 
+void hapusBelakang() 
+{
+    if (head == NULL) {
+        cout << "List masih kosong!" << endl;
+    } else {
+        Node *hapus = tail;
+        if (tail->prev != NULL) {
+            tail = tail->prev;
+            tail->next = NULL;
+        } else {
+            head = NULL;
+            tail = NULL;
+        }
+        delete hapus;
+    }
+}
+
