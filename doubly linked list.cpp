@@ -75,3 +75,20 @@ void tampil()
     }
 }
 
+void hapusDepan() 
+{
+    if (head == NULL) {
+        cout << "List masih kosong!" << endl;
+    } else {
+        Node *hapus = head;
+        if (head->next != NULL) {
+            head = head->next;
+            head->prev = NULL;
+        } else {
+            head = NULL;
+            tail = NULL;
+        }
+        delete hapus;
+    }
+}
+
