@@ -120,7 +120,8 @@ void clear()
 int main() {
     int pilihan, data;
 
-    do {
+    do 
+    {
         cout << "\n=== MENU DOUBLY LINKED LIST ===" << endl;
         cout << "1. Tambah Depan" << endl;
         cout << "2. Tambah Belakang" << endl;
@@ -131,4 +132,35 @@ int main() {
         cout << "7. Keluar" << endl;
         cout << "Pilihan Anda: ";
         cin >> pilihan;
+        switch (pilihan) 
+        {
+            case 1:
+                cout << "Masukkan data: ";
+                cin >> data;
+                tambahDepan(data);
+                break;
+            case 2:
+                cout << "Masukkan data: ";
+                cin >> data;
+                tambahBelakang(data);
+                break;
+            case 3:
+                hapusDepan();
+                break;
+            case 4:
+                hapusBelakang();
+                break;
+            case 5:
+                tampil();
+                break;
+            case 6:
+                clear();
+                break;
+            case 7:
+                cout << "Terima kasih!" << endl;
+                break;
+            default:
+                cout << "Pilihan tidak valid!" << endl;
+                break;
+        }
 }
